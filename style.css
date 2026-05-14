@@ -1,0 +1,43 @@
+#subtitle {
+    font-size: 8px;
+}
+
+#game {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 5vh;
+}
+
+#question {
+    display: flex;
+    align-items: center;
+
+    font-size: 5vh;
+}
+
+#answer_form {
+    display: flex;
+}
+
+#answer_form #answer {
+    height: 100%;
+    margin: 0px 5px;
+    padding: 0 1rem;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+#answer_form #answer:hover {border-color: var(--hover-color);}
+
+#answer_form #answer:focus {
+    border-color: var(--pressed-color);
+    outline: none;
+}
+
+#answer_form button {
+    height: 100%;
+    margin: 0px 5px;
+    padding: 0 1rem;
+}

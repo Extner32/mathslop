@@ -1,0 +1,52 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+#content {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#graphs {
+    height: 400px;
+    width: 100%;
+    max-width: 900px;
+}
+
+#history_settings{
+    max-width: 900px;
+    width: 100%;
+}
+
+#delete_history_btn {width: 100%}
+
+#table_container {
+    margin-top: 20px;
+    height: 300px;
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+    font-family: monospace;
+}
+
+thead, th {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    color: black;
+}
+
+td {
+    padding: 5px;
+    border-bottom: 1px solid #333;
+    text-align: center;
+}

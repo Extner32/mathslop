@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>mathslop</title>
+        <link rel="stylesheet" href="common.css"/>
+        <link rel="stylesheet" href="history.css" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <div id="header">
+            <h1>history</h1>
+            <a href="index.html"><button type="button">back to work</button></a>
+        </div>
+
+        <hr />
+
+        <div id="content">
+            <div id="graphs">
+                <canvas id="response_time_graph" class="graph"></canvas>
+            </div>
+
+            <div id="history_settings">
+                <button id="delete_history_btn">delete history (!!!)</button>
+
+                <div id="table_container">
+                    <table>
+                    <thead>
+                        <tr>
+                        <th>a</th>
+                        <th>b</th>
+                        <th>answer</th>
+                        <th>response time (ms)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history_table"></tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+
+        <script src="history.js"></script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+:root {
+  --hover-color: orange; /* global scope */
+  --pressed-color: green;
+}
+
+h1 {
+    margin: 0px;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    font-family: monospace;
+    height: 4rem;
+}
+
+body {
+    background-color: black;
+    color: white;
+    margin: 0px;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    margin: 0px;
+    padding: 5px;
+}
+
+button:hover {border-color: var(--hover-color);}
+button:active {border-color: var(--pressed-color);}
+
+
+input,
+button {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
