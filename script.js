@@ -42,11 +42,11 @@ function onAnswerSubmit(answer) {
   logAttempt(question[0], question[1], answer, response_time)
 
   if (answer == question[2]) {
-    feedback_elem.textContent = ":)";
+    feedback_elem.textContent = "good :)";
     feedback_elem.style.color = "green";
   }
   else {
-    feedback_elem.textContent = ">:(";
+    feedback_elem.textContent = "garbage!!! >:(";
     feedback_elem.style.color = "red";
   }
 
