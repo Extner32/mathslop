@@ -18,7 +18,7 @@ function updateVisualizers() {
 function updateResponseTimeGraph() {
   const ctx = document.getElementById("response_time_graph");
 
-  const labels = attempt_history.map((_, i) => `#${i + 1}`);
+  const labels = attempt_history.map(a => `${a.a} · ${a.b}`);
   const data = attempt_history.map(a => a.response_time);
   const colors = attempt_history.map(a =>
     a.correct ? "green" : "red"
@@ -50,7 +50,10 @@ function updateResponseTimeGraph() {
         },
         y: {
           ticks: { color: "white" },
-          grid: { color: "#333" }
+          grid: { color: "#333" },
+          border: {
+              display: false
+            }
         }
       },
       plugins: {
@@ -83,8 +86,7 @@ function updateTable() {
     const row = document.createElement("tr");
 
     row.innerHTML = `
-      <td>${attempt.a}</td>
-      <td>${attempt.b}</td>
+      <td>${attempt.a} · ${attempt.b}</td>
       <td>${attempt.answer}</td>
       <td>${attempt.response_time}</td>
     `;

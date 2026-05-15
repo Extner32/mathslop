@@ -5,6 +5,7 @@ function rand(min, max) {
 const question_elem = document.getElementById("question");
 const answer_elem = document.getElementById("answer")
 const answer_form_elem = document.getElementById("answer_form");
+const feedback_elem = document.getElementById("feedback");
 
 answer_form_elem.addEventListener("submit", (event) => {
   event.preventDefault(); // stop page reload
@@ -41,10 +42,12 @@ function onAnswerSubmit(answer) {
   logAttempt(question[0], question[1], answer, response_time)
 
   if (answer == question[2]) {
-    console.log("correct");
+    feedback_elem.textContent = ":)";
+    feedback_elem.style.color = "green";
   }
   else {
-    console.log("wrong");
+    feedback_elem.textContent = ">:(";
+    feedback_elem.style.color = "red";
   }
 
   answer_elem.value = ""; //clear input field
